@@ -92,7 +92,7 @@ export default function CaregiverInfoPage() {
               공단 인정 기준, 기관 운영 정책에 따라 실제 적용 여부가 달라지므로 사전 상담이 중요합니다.
             </p>
           </article>
-        </section>
+
                   <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
             <h2 className="text-lg font-bold text-slate-900 sm:text-xl">
               요양보호사 자주 묻는 질문
@@ -117,10 +117,18 @@ export default function CaregiverInfoPage() {
                   a: "가족요양은 요양보호사 자격을 가진 가족이 수급자를 돌보는 경우에 적용될 수 있어 자격증 보유 여부가 중요합니다.",
                 },
               ].map((faq) => (
-                <div key={faq.q} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                  <h3 className="text-base font-semibold text-slate-900">{faq.q}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-700">{faq.a}</p>
-                </div>
+                <details
+                  key={faq.q}
+                  className="group overflow-hidden rounded-xl border border-slate-200 bg-slate-50 shadow-sm transition-shadow duration-200 ease-out"
+                >
+                  <summary className="flex cursor-pointer items-center justify-between gap-4 px-4 py-4 text-base font-semibold text-slate-900 transition-colors duration-200 ease-out hover:text-slate-700">
+                    {faq.q}
+                    <span className="text-slate-500 transition-transform duration-200 ease-out group-open:-rotate-45">+</span>
+                  </summary>
+                  <div className="overflow-hidden border-t border-slate-200 px-4 transition-[max-height,opacity] duration-300 ease-out max-h-0 opacity-0 group-open:max-h-60 group-open:py-4 group-open:opacity-100">
+                    <p className="text-sm leading-6 text-slate-700">{faq.a}</p>
+                  </div>
+                </details>
               ))}
             </div>
           </article>
@@ -162,6 +170,7 @@ export default function CaregiverInfoPage() {
               </Link>
             </div>
           </article>
+                  </section>
       </section>
     </main>
   );

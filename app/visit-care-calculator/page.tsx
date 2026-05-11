@@ -1,7 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
+import BottomAd from "../components/ads/bottom-ad";
+import MiddleAd from "../components/ads/middle-ad";
 import SiteHeader from "../components/site-header";
+import TopAd from "../components/ads/top-ad";
 
 type CareGrade = "1등급" | "2등급" | "3등급" | "4등급" | "5등급" | "인지지원";
 type VisitDuration = "30분" | "60분" | "90분" | "120분" | "150분" | "180분" | "210분" | "240분";
@@ -84,7 +88,9 @@ export default function VisitCareCalculatorPage() {
           </p>
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+       {/* <TopAd /> */}
+
+        <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-5 shadow-sm sm:p-6">
           <div className="space-y-4">
             <div>
               <label htmlFor="grade" className="mb-2 block text-sm font-semibold text-slate-800">
@@ -162,6 +168,8 @@ export default function VisitCareCalculatorPage() {
           </div>
         </div>
 
+       {/* <MiddleAd /> */}
+
         <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-5 shadow-sm sm:p-6">
           <h2 className="text-base font-bold text-blue-900 sm:text-lg">예상 급여 결과</h2>
           <div className="mt-4 space-y-2">
@@ -232,6 +240,8 @@ export default function VisitCareCalculatorPage() {
           </div>
         </section>
 
+      {/*  <BottomAd /> */}
+
         <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
           <h2 className="text-lg font-bold text-slate-900 sm:text-xl">자주 묻는 질문</h2>
           <p className="mt-3 text-sm leading-6 text-slate-700 sm:text-base">
@@ -274,6 +284,32 @@ export default function VisitCareCalculatorPage() {
                 확인할 수 있습니다.
               </p>
             </details>
+          </div>
+        </section>
+
+        <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+          <h2 className="text-lg font-bold text-slate-900 sm:text-xl">계산 후 함께 확인하세요</h2>
+          <p className="mt-3 text-sm leading-6 text-slate-700 sm:text-base">
+            계산 결과를 확인한 후 아래 자료를 참고하여 방문요양, 장기요양, 지원금 정보를 함께 확인해 보세요.
+          </p>
+
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <Link href="/visit-care-guide" className="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm transition hover:border-slate-300 hover:bg-white">
+              <h3 className="text-base font-semibold text-slate-900">방문요양 안내</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">방문요양 서비스 이용 기준과 처차를 확인하세요.</p>
+            </Link>
+            <Link href="/visit-care-guide/copayment" className="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm transition hover:border-slate-300 hover:bg-white">
+              <h3 className="text-base font-semibold text-slate-900">방문요양 본인부담금</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">방문즔당 본인부담금 기준과 감면 정보를 확인하세요.</p>
+            </Link>
+            <Link href="/long-term-care" className="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm transition hover:border-slate-300 hover:bg-white">
+              <h3 className="text-base font-semibold text-slate-900">장기요양 안내</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">장기요양 등급과 이용 절차를 확인하세요.</p>
+            </Link>
+            <Link href="/support-benefits" className="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm transition hover:border-slate-300 hover:bg-white">
+              <h3 className="text-base font-semibold text-slate-900">지원금/감면 제도</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">본인부담금 감면과 지원금 정보를 확인하세요.</p>
+            </Link>
           </div>
         </section>
       </section>

@@ -167,10 +167,18 @@ export default function LongTermCarePage() {
                 a: "서비스 종류와 등급, 이용 시간, 감면 여부에 따라 달라집니다. 정확한 금액은 이용 예정 서비스 기준으로 계산해보는 것이 좋습니다.",
               },
             ].map((faq) => (
-              <div key={faq.q} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                <h3 className="text-sm font-bold text-slate-900 sm:text-base">{faq.q}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-700">{faq.a}</p>
-              </div>
+              <details
+                key={faq.q}
+                className="group overflow-hidden rounded-xl border border-slate-200 bg-slate-50 shadow-sm transition-shadow duration-200 ease-out"
+              >
+                <summary className="flex cursor-pointer items-center justify-between gap-4 px-4 py-4 text-sm font-bold text-slate-900 transition-colors duration-200 ease-out hover:text-slate-700">
+                  {faq.q}
+                  <span className="text-slate-500 transition-transform duration-200 ease-out group-open:-rotate-45">+</span>
+                </summary>
+                <div className="overflow-hidden border-t border-slate-200 px-4 transition-[max-height,opacity] duration-300 ease-out max-h-0 opacity-0 group-open:max-h-60 group-open:py-4 group-open:opacity-100">
+                  <p className="text-sm leading-6 text-slate-700">{faq.a}</p>
+                </div>
+              </details>
             ))}
           </div>
         </article>

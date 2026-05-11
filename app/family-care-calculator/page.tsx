@@ -1,7 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
+import BottomAd from "../components/ads/bottom-ad";
+import MiddleAd from "../components/ads/middle-ad";
 import SiteHeader from "../components/site-header";
+import TopAd from "../components/ads/top-ad";
 
 type CareGrade = "1등급" | "2등급" | "3등급" | "4등급" | "5등급";
 type FamilyCareType = "60분형" | "90분형";
@@ -102,7 +106,9 @@ export default function FamilyCareCalculatorPage() {
           </p>
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+      {/*  <TopAd /> */}
+
+        <div className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
           <div className="space-y-4">
             <div>
               <label htmlFor="grade" className="mb-2 block text-sm font-semibold text-slate-800">
@@ -205,6 +211,8 @@ export default function FamilyCareCalculatorPage() {
           </div>
         </div>
 
+      {/*  <MiddleAd /> */}
+
         <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-5 shadow-sm sm:p-6">
           <h2 className="text-base font-bold text-blue-900 sm:text-lg">예상 급여 결과</h2>
           <div className="mt-3 rounded-lg border border-blue-200 bg-white/80 p-3">
@@ -264,13 +272,7 @@ export default function FamilyCareCalculatorPage() {
 
         <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
           <h2 className="text-lg font-bold text-slate-900 sm:text-xl">가족요양 안내 및 이용 가이드</h2>
-          <p className="mt-3 text-sm leading-6 text-slate-700 sm:text-base">
-            가족요양 급여 계산기는 가족요양 제도를 이해하고 예상 비용을 확인하려는 보호자와 수급자를 위한 안내 도구입니다.
-            가족요양, 장기요양등급, 본인부담금, 공단부담금과 같은 핵심 정보를 한 화면에서 확인할 수 있어 실제 이용 전
-            준비에 도움이 됩니다.
-          </p>
-
-          <div className="mt-5 space-y-4">
+          <div className="mt-4 space-y-3">
             <article className="rounded-xl border border-slate-200 bg-slate-50 p-4">
               <h3 className="text-base font-semibold text-slate-900">가족요양이란?</h3>
               <p className="mt-2 text-sm leading-6 text-slate-700">
@@ -308,6 +310,8 @@ export default function FamilyCareCalculatorPage() {
             </article>
           </div>
         </section>
+
+       {/* <BottomAd /> */}
 
         <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
           <h2 className="text-lg font-bold text-slate-900 sm:text-xl">자주 묻는 질문</h2>
@@ -395,6 +399,32 @@ export default function FamilyCareCalculatorPage() {
                 직접 돌봄을 제공하는 방식입니다.
               </p>
             </details>
+          </div>
+        </section>
+
+        <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+          <h2 className="text-lg font-bold text-slate-900 sm:text-xl">계산 후 함께 확인하세요</h2>
+          <p className="mt-3 text-sm leading-6 text-slate-700 sm:text-base">
+            계산 결과를 확인한 후 아래 자료를 참고하여 가족요양, 장기요양, 지원금 정보를 함께 확인해 보세요.
+          </p>
+
+          <div className="mt-5 grid gap-4 sm:grid-cols-2">
+            <Link href="/family-care-guide" className="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm transition hover:border-slate-300 hover:bg-white">
+              <h3 className="text-base font-semibold text-slate-900">가족요양 안내</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">가족요양 인정 조건과 급여 기준을 확인하세요.</p>
+            </Link>
+            <Link href="/family-care-guide/90min" className="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm transition hover:border-slate-300 hover:bg-white">
+              <h3 className="text-base font-semibold text-slate-900">가족요양 90분 기준</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">90분 가족요양 인정 조건과 적용 사례를 확인하세요.</p>
+            </Link>
+            <Link href="/long-term-care" className="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm transition hover:border-slate-300 hover:bg-white">
+              <h3 className="text-base font-semibold text-slate-900">장기요양 안내</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">장기요양 등급과 이용 절차를 확인하세요.</p>
+            </Link>
+            <Link href="/support-benefits" className="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm transition hover:border-slate-300 hover:bg-white">
+              <h3 className="text-base font-semibold text-slate-900">지원금/감면 제도</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">본인부담금 감면과 지원금 정보를 확인하세요.</p>
+            </Link>
           </div>
         </section>
       </section>

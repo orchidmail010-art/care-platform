@@ -134,21 +134,21 @@ export default function SocialWorkerInfoPage() {
           <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <Link
               href="/caregiver-info"
-              className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-slate-300 hover:shadow"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-blue-50"
             >
               <h3 className="text-base font-semibold text-slate-900">요양보호사 정보</h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">자격 취득, 업무 범위, 현장 가이드를 확인하세요.</p>
             </Link>
             <Link
               href="/family-care-guide"
-              className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-slate-300 hover:shadow"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-blue-50"
             >
               <h3 className="text-base font-semibold text-slate-900">가족요양 안내</h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">가족요양 인정 기준과 월별 급여 정보를 제공합니다.</p>
             </Link>
             <Link
               href="/visit-care-guide"
-              className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-slate-300 hover:shadow"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-blue-50"
             >
               <h3 className="text-base font-semibold text-slate-900">방문요양 안내</h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">이용시간, 등급별 한도액, 본인부담금 계산 기준을 확인하세요.</p>

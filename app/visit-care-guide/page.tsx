@@ -88,7 +88,8 @@ export default function VisitCareGuidePage() {
             </div>
           </article>
         </section>
-                  <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+<section className="mt-5 space-y-4">
+          <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
             <h2 className="text-lg font-bold text-slate-900 sm:text-xl">
               방문요양 자주 묻는 질문
             </h2>
@@ -112,14 +113,23 @@ export default function VisitCareGuidePage() {
                   a: "조건에 따라 일부 병행이 가능할 수 있으나, 실제 이용 가능 여부는 장기요양기관과 공단 기준 확인이 필요합니다.",
                 },
               ].map((faq) => (
-                <div key={faq.q} className="rounded-xl border border-slate-200 bg-slate-50 p-4">
-                  <h3 className="text-base font-semibold text-slate-900">{faq.q}</h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-700">{faq.a}</p>
-                </div>
+                <details
+                  key={faq.q}
+                  className="group overflow-hidden rounded-xl border border-slate-200 bg-slate-50 shadow-sm transition-shadow duration-200 ease-out"
+                >
+                  <summary className="flex cursor-pointer items-center justify-between gap-4 px-4 py-4 text-base font-semibold text-slate-900 transition-colors duration-200 ease-out hover:text-slate-700">
+                    {faq.q}
+                    <span className="text-slate-500 transition-transform duration-200 ease-out group-open:-rotate-45">+</span>
+                  </summary>
+                  <div className="overflow-hidden border-t border-slate-200 px-4 transition-[max-height,opacity] duration-300 ease-out max-h-0 opacity-0 group-open:max-h-60 group-open:py-4 group-open:opacity-100">
+                    <p className="text-sm leading-6 text-slate-700">{faq.a}</p>
+                  </div>
+                </details>
               ))}
             </div>
           </article>
-
+</section>
+<section className="mt-5 space-y-4">
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
             <h2 className="text-lg font-bold text-slate-900 sm:text-xl">
               함께 보면 좋은 서비스
@@ -157,6 +167,7 @@ export default function VisitCareGuidePage() {
               </Link>
             </div>
           </article>
+</section>
       </section>
     </main>
   );

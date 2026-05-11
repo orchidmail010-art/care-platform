@@ -24,6 +24,43 @@ export default function SupportBenefitsPage() {
           </div>
         </div>
 
+        <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+          <h2 className="text-lg font-bold text-slate-900 sm:text-xl">지원금/감면 세부 메뉴</h2>
+          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2">
+            <Link
+              href="/support-benefits/copayment-reduction"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-blue-50"
+            >
+              <h3 className="text-base font-semibold text-slate-900">본인부담금 감면</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">본인부담금 감면 대상과 신청 정보를 자세히 확인할 수 있습니다.</p>
+            </Link>
+
+            <Link
+              href="/support-benefits/local-support"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-blue-50"
+            >
+              <h3 className="text-base font-semibold text-slate-900">지자체 지원금</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">지역별 추가 지원금과 신청 방법을 확인하세요.</p>
+            </Link>
+
+            <Link
+              href="/support-benefits/documents"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-blue-50"
+            >
+              <h3 className="text-base font-semibold text-slate-900">신청서류</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">감면 및 지원금 신청 시 필요한 주요 서류를 안내합니다.</p>
+            </Link>
+
+            <Link
+              href="/support-benefits/faq"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-blue-50"
+            >
+              <h3 className="text-base font-semibold text-slate-900">자주 묻는 질문</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">지원금 및 감면 제도 관련 자주 묻는 질문을 모았습니다.</p>
+            </Link>
+          </div>
+        </section>
+
         <section className="mt-5 space-y-4">
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
             <h2 className="text-lg font-bold text-slate-900 sm:text-xl">장기요양 본인부담금이란?</h2>
@@ -131,28 +168,31 @@ export default function SupportBenefitsPage() {
         </section>
 
         <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
-          <h2 className="text-lg font-bold text-slate-900 sm:text-xl">관련 페이지</h2>
-          <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <h2 className="text-lg font-bold text-slate-900 sm:text-xl">함께 보면 좋은 서비스</h2>
+
+          <div className="mt-4 grid gap-3 sm:grid-cols-3">
             <Link
-              href="/family-care-calculator"
-              className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-slate-300 hover:shadow"
+              href="/long-term-care"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-blue-50"
             >
-              <h3 className="text-base font-semibold text-slate-900">가족요양 급여 계산기</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">가족요양 인정 기준과 월별 급여 정보를 제공합니다.</p>
+              <h3 className="text-sm font-bold text-slate-900 sm:text-base">장기요양 안내</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">장기요양 등급 신청과 이용 절차를 확인하세요.</p>
             </Link>
+
             <Link
-              href="/visit-care-calculator"
-              className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-slate-300 hover:shadow"
+              href="/visit-care-guide"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-blue-50"
             >
-              <h3 className="text-base font-semibold text-slate-900">방문요양 본인부담금 계산기</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">이용시간, 등급별 한도액, 본인부담금 계산 기준을 확인하세요.</p>
+              <h3 className="text-sm font-bold text-slate-900 sm:text-base">방문요양 안내</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">방문요양 이용 시간과 본인부담 기준을 확인하세요.</p>
             </Link>
+
             <Link
-              href="/caregiver-info"
-              className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm transition hover:border-slate-300 hover:shadow"
+              href="/family-care-guide"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-blue-50"
             >
-              <h3 className="text-base font-semibold text-slate-900">요양보호사 정보</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-600">자격 취득, 업무 범위, 현장 가이드를 확인하세요.</p>
+              <h3 className="text-sm font-bold text-slate-900 sm:text-base">가족요양 안내</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-700">가족요양 인정 기준과 급여 조건을 확인하세요.</p>
             </Link>
           </div>
         </section>
