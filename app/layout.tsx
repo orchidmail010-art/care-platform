@@ -12,6 +12,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata = {
+  verification: {
+    google: "MkN3p9FLXRrDKlczpdcsYgXqPiBt6HVDh-dRGWGCYUo" ,
+  },
+}
+
 export const metadata: Metadata = {
   title: "케어 플랫폼 | 장기요양 · 가족요양 · 방문요양 계산기",
 description:
