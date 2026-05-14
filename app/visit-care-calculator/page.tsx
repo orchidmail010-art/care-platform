@@ -300,7 +300,7 @@ export default function VisitCareCalculatorPage() {
             </Link>
             <Link href="/visit-care-guide/copayment" className="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm transition hover:border-slate-300 hover:bg-white">
               <h3 className="text-base font-semibold text-slate-900">방문요양 본인부담금</h3>
-              <p className="mt-2 text-sm leading-6 text-slate-700">방문즔당 본인부담금 기준과 감면 정보를 확인하세요.</p>
+              <p className="mt-2 text-sm leading-6 text-slate-700">방문요양 본인부담금 기준과 감면 정보를 확인하세요.</p>
             </Link>
             <Link href="/long-term-care" className="rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm transition hover:border-slate-300 hover:bg-white">
               <h3 className="text-base font-semibold text-slate-900">장기요양 안내</h3>
