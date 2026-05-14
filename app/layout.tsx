@@ -12,18 +12,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  verification: {
-    google: "MkN3p9FLXRrDKlczpdcsYgXqPiBt6HVDh-dRGWGCYUo" ,
-  },
-}
-
 export const metadata: Metadata = {
-  title: "케어 플랫폼 | 장기요양 · 가족요양 · 방문요양 계산기",
+  title: "돌봄닥 | 국민돌봄 복지플랫폼",
 description:
   "장기요양보험, 가족요양, 방문요양, 요양보호사 정보와 본인부담금 계산기를 제공하는 복지 플랫폼",
   verification: {
-    google: "ryj2U217M5D9hzOp0vwkpuncSSszUIttX9EZNWUWLEU",
+    google: "MkN3p9FLXRrDKlczpdcsYgXqPiBt6HVDh-dRGWGCYUo",
   },
 };
 
