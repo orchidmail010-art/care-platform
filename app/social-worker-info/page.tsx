@@ -1,4 +1,7 @@
 import Link from "next/link";
+import TopAd from "../components/ads/top-ad";
+import MiddleAd from "../components/ads/middle-ad";
+import BottomAd from "../components/ads/bottom-ad";
 import SiteHeader from "../components/site-header";
 
 export default function SocialWorkerInfoPage() {
@@ -23,6 +26,8 @@ export default function SocialWorkerInfoPage() {
             </Link>
           </div>
         </div>
+
+        <TopAd />
 
         <section className="mt-5 space-y-4">
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
@@ -73,6 +78,8 @@ export default function SocialWorkerInfoPage() {
             </p>
           </article>
         </section>
+
+        <MiddleAd />
 
         <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
           <h2 className="text-lg font-bold text-slate-900 sm:text-xl">자주 묻는 질문</h2>
@@ -134,7 +141,7 @@ export default function SocialWorkerInfoPage() {
           <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             <Link
               href="/caregiver-info"
-              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-blue-50"
+              className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-blue-50" 
             >
               <h3 className="text-base font-semibold text-slate-900">요양보호사 정보</h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">자격 취득, 업무 범위, 현장 가이드를 확인하세요.</p>
@@ -155,6 +162,9 @@ export default function SocialWorkerInfoPage() {
             </Link>
           </div>
         </section>
+
+      <BottomAd />
+
       </section>
     </main>
   );

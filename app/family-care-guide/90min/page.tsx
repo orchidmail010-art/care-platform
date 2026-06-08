@@ -1,4 +1,7 @@
 import Link from "next/link";
+import TopAd from "../../components/ads/top-ad";
+import MiddleAd from "../../components/ads/middle-ad";
+import BottomAd from "../../components/ads/bottom-ad";
 import SiteHeader from "../../components/site-header";
 
 export default function FamilyCareGuide90MinPage() {
@@ -27,6 +30,8 @@ export default function FamilyCareGuide90MinPage() {
             </Link>
           </div>
         </div>
+
+        <TopAd />
 
         <section className="mt-5 space-y-4">
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
@@ -103,6 +108,8 @@ export default function FamilyCareGuide90MinPage() {
           </article>
         </section>
 
+        <MiddleAd />
+
         <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
           <h2 className="text-lg font-bold text-slate-900 sm:text-xl">자주 묻는 질문</h2>
           <p className="mt-3 text-sm leading-6 text-slate-700 sm:text-base">
@@ -175,6 +182,8 @@ export default function FamilyCareGuide90MinPage() {
             </details>
           </div>
         </section>
+
+      <BottomAd />
 
         <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
           <h2 className="text-lg font-bold text-slate-900 sm:text-xl">계산 후 함께 확인하세요</h2>

@@ -1,4 +1,7 @@
 import Link from "next/link";
+import TopAd from "../../components/ads/top-ad";
+import MiddleAd from "../../components/ads/middle-ad";
+import BottomAd from "../../components/ads/bottom-ad";
 import SiteHeader from "../../components/site-header";
 
 export default function SocialWorkerSalaryPage() {
@@ -37,6 +40,8 @@ export default function SocialWorkerSalaryPage() {
             사회복지사 초봉부터 경력별 급여, 기관별 차이, 실제 사례까지 정리했습니다. 취업 준비나 이직을 고려하는 분들에게 유용한 정보를 제공합니다.
           </p>
         </div>
+
+        <TopAd />
 
         <section className="mt-5 space-y-4">
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
@@ -107,6 +112,8 @@ export default function SocialWorkerSalaryPage() {
             </div>
           </article>
 
+          <MiddleAd />
+
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
             <h2 className="text-lg font-bold text-slate-900 sm:text-xl">자주 묻는 질문</h2>
             <div className="mt-4 space-y-3 text-sm leading-6 text-slate-700 sm:text-base">
@@ -118,6 +125,8 @@ export default function SocialWorkerSalaryPage() {
               ))}
             </div>
           </article>
+
+          <BottomAd />
 
           <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
             <h2 className="text-lg font-bold text-slate-900 sm:text-xl">관련 링크</h2>

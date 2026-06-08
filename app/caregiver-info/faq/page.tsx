@@ -1,4 +1,7 @@
 import Link from "next/link";
+import TopAd from "../../components/ads/top-ad";
+import MiddleAd from "../../components/ads/middle-ad";
+import BottomAd from "../../components/ads/bottom-ad";
 import SiteHeader from "../../components/site-header";
 
 export default function CaregiverFaqPage() {
@@ -55,6 +58,10 @@ export default function CaregiverFaqPage() {
           </p>
         </div>
 
+        <TopAd />
+
+        <MiddleAd />
+
         <section className="mt-5 space-y-4">
           {faqs.map((faq) => (
             <details
@@ -71,6 +78,8 @@ export default function CaregiverFaqPage() {
             </details>
           ))}
         </section>
+
+        <BottomAd />
 
         <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
           <h2 className="text-lg font-bold text-slate-900 sm:text-xl">관련 서비스</h2>

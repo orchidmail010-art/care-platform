@@ -3,37 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-interface NavItem {
-  label: string;
-  href: string;
-  submenu: Array<{ label: string; href: string }>;
-}
-
-const ChevronDownIcon = ({ isOpen }: { isOpen: boolean }) => (
-  <svg
-    className={`h-3.5 w-3.5 transition-transform duration-200 ${
-      isOpen ? "rotate-180" : ""
-    }`}
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={2}
-      d="M19 14l-7 7m0 0l-7-7m7 7V3"
-    />
-  </svg>
-);
-
-interface NavItem {
-  label: string;
-  href: string;
-  submenu: Array<{ label: string; href: string }>;
-}
-
-const navItems: NavItem[] = [
+const navItems = [
   {
     label: "장기요양",
     href: "/long-term-care",
@@ -120,7 +90,7 @@ const navItems: NavItem[] = [
   },
 ];
 
-function NavDropdown({ item }: { item: NavItem }) {
+function NavDropdown({ item }: any) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -129,34 +99,45 @@ function NavDropdown({ item }: { item: NavItem }) {
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
-      {/* Desktop Menu Button */}
       <button className="flex items-center gap-1 hover:text-slate-900">
         <span>{item.label}</span>
-        <ChevronDownIcon isOpen={isOpen} />
+        <svg
+          className={`h-3.5 w-3.5 transition-transform duration-200 ${
+            isOpen ? "rotate-180" : ""
+          }`}
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
       </button>
 
-      {/* Desktop Dropdown */}
-      <div className="absolute left-0 top-full z-50 hidden pt-2 group-hover:block">
-  <div className="min-w-[180px] overflow-hidden rounded-lg border border-slate-200 bg-white shadow-lg">
-    {item.submenu.map((subitem, idx) => (
-      <Link
-        key={subitem.label}
-        href={subitem.href}
-        className={`block px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-slate-900 ${
-          idx !== item.submenu.length - 1 ? "border-b border-slate-100" : ""
-        }`}
-      >
-        {subitem.label}
-      </Link>
-    ))}
-  </div>
-</div>
+      <div className="absolute top-full left-0 mt-1 hidden min-w-[180px] flex-col rounded-lg border border-slate-200 bg-white shadow-lg group-hover:flex">
+        {item.submenu.map((subitem: any, idx: number) => (
+          <Link
+            key={subitem.label}
+            href={subitem.href}
+            className={`px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-slate-900 ${
+              idx !== item.submenu.length - 1 ? "border-b border-slate-100" : ""
+            } ${idx === 0 ? "rounded-t-md" : ""} ${
+              idx === item.submenu.length - 1 ? "rounded-b-md" : ""
+            }`}
+          >
+            {subitem.label}
+          </Link>
+        ))}
+      </div>
 
-      {/* Mobile Dropdown */}
       <div className="hidden flex-col sm:hidden">
         {isOpen && (
           <div className="mt-2 flex flex-col rounded-lg border border-slate-200 bg-white shadow-lg">
-            {item.submenu.map((subitem, idx) => (
+            {item.submenu.map((subitem: any, idx: number) => (
               <Link
                 key={subitem.label}
                 href={subitem.href}
@@ -177,12 +158,12 @@ function NavDropdown({ item }: { item: NavItem }) {
   );
 }
 
-function MobileNav({ items }: { items: NavItem[] }) {
+function MobileNav({ items }: any) {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
 
   return (
     <nav className="flex flex-col gap-1 sm:hidden">
-      {items.map((item) => (
+      {items.map((item: any) => (
         <div key={item.label} className="border-b border-slate-100 last:border-b-0">
           <button
             onClick={() =>
@@ -191,11 +172,25 @@ function MobileNav({ items }: { items: NavItem[] }) {
             className="flex w-full items-center justify-between px-3 py-2 text-xs font-medium text-slate-600 hover:text-slate-900"
           >
             <span>{item.label}</span>
-            <ChevronDownIcon isOpen={openMenu === item.label} />
+            <svg
+              className={`h-3.5 w-3.5 transition-transform duration-200 ${
+                openMenu === item.label ? "rotate-180" : ""
+              }`}
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
           </button>
           {openMenu === item.label && (
             <div className="flex flex-col bg-slate-50">
-              {item.submenu.map((subitem) => (
+              {item.submenu.map((subitem: any) => (
                 <Link
                   key={subitem.label}
                   href={subitem.href}
@@ -232,14 +227,12 @@ export default function SiteHeader() {
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
         <nav className="hidden flex-wrap items-center gap-x-4 gap-y-2 text-xs font-medium text-slate-600 sm:gap-x-5 sm:flex sm:text-sm">
           {navItems.map((item) => (
             <NavDropdown key={item.label} item={item} />
           ))}
         </nav>
 
-        {/* Mobile Navigation */}
         <MobileNav items={navItems} />
       </div>
     </header>

@@ -1,4 +1,7 @@
 import Link from "next/link";
+import TopAd from "../../components/ads/top-ad";
+import MiddleAd from "../../components/ads/middle-ad";
+import BottomAd from "../../components/ads/bottom-ad";
 import SiteHeader from "../../components/site-header";
 
 export default function CaregiverExamPage() {
@@ -38,6 +41,8 @@ export default function CaregiverExamPage() {
             꼼꼼히 확인하세요.
           </p>
         </div>
+
+        <TopAd />
 
         <section className="mt-5 space-y-4">
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
@@ -118,6 +123,8 @@ export default function CaregiverExamPage() {
             </div>
           </article>
 
+          <MiddleAd />
+
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
             <h2 className="text-lg font-bold text-slate-900 sm:text-xl">자주 하는 질문</h2>
             <div className="mt-4 space-y-3 text-sm leading-6 text-slate-700 sm:text-base">
@@ -158,6 +165,8 @@ export default function CaregiverExamPage() {
               </details>
             ))}
           </section>
+
+          <BottomAd />
 
           <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
             <h2 className="text-lg font-bold text-slate-900 sm:text-xl">관련 링크</h2>

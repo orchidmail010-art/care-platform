@@ -1,4 +1,7 @@
 import Link from "next/link";
+import TopAd from "../../components/ads/top-ad";
+import MiddleAd from "../../components/ads/middle-ad";
+import BottomAd from "../../components/ads/bottom-ad";
 import SiteHeader from "../../components/site-header";
 
 export default function SocialWorkerCertificatePage() {
@@ -37,6 +40,8 @@ export default function SocialWorkerCertificatePage() {
             사회복지사 자격증의 종류와 취득 절차, 실습 정보, 그리고 취업 연결까지 한 번에 정리했습니다. 자격 취득을 준비하는 분들을 위해 꼭 필요한 내용을 담았습니다.
           </p>
         </div>
+
+        <TopAd />
 
         <section className="mt-5 space-y-4">
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
@@ -111,6 +116,8 @@ export default function SocialWorkerCertificatePage() {
             </div>
           </article>
 
+          <MiddleAd />
+
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
             <h2 className="text-lg font-bold text-slate-900 sm:text-xl">자주 묻는 질문</h2>
             <div className="mt-4 space-y-3 text-sm leading-6 text-slate-700 sm:text-base">
@@ -122,6 +129,8 @@ export default function SocialWorkerCertificatePage() {
               ))}
             </div>
           </article>
+
+          <BottomAd />
 
           <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
             <h2 className="text-lg font-bold text-slate-900 sm:text-xl">관련 링크</h2>

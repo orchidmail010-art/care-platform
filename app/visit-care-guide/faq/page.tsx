@@ -1,4 +1,7 @@
 import Link from "next/link";
+import TopAd from "../../components/ads/top-ad";
+import MiddleAd from "../../components/ads/middle-ad";
+import BottomAd from "../../components/ads/bottom-ad";
 import SiteHeader from "../../components/site-header";
 
 export default function VisitCareFaqPage() {
@@ -68,6 +71,8 @@ export default function VisitCareFaqPage() {
             </Link>
           </div>
         </div>
+
+        <TopAd />
 
         <section className="mt-5 space-y-4">
           {faqs.map((faq) => (

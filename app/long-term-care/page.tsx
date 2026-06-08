@@ -1,4 +1,7 @@
 import Link from "next/link";
+import TopAd from "../components/ads/top-ad";
+import MiddleAd from "../components/ads/middle-ad";
+import BottomAd from "../components/ads/bottom-ad";
 import SiteHeader from "../components/site-header";
 
 export default function LongTermCarePage() {
@@ -32,6 +35,8 @@ export default function LongTermCarePage() {
             </Link>
           </div>
         </div>
+
+        <TopAd />
 
         <section className="mt-5 space-y-4">
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
@@ -143,7 +148,9 @@ export default function LongTermCarePage() {
       </section>
 
              <section className="mx-auto mt-5 w-full max-w-4xl px-4 sm:px-6">
-        <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
+<MiddleAd />
+
+          <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
           <h2 className="text-lg font-bold text-slate-900 sm:text-xl">
             장기요양 자주 묻는 질문
           </h2>

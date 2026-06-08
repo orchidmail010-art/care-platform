@@ -5,7 +5,6 @@ import { useMemo, useState } from "react";
 import BottomAd from "../components/ads/bottom-ad";
 import MiddleAd from "../components/ads/middle-ad";
 import SiteHeader from "../components/site-header";
-import TopAd from "../components/ads/top-ad";
 
 type CareGrade = "1등급" | "2등급" | "3등급" | "4등급" | "5등급" | "인지지원";
 type VisitDuration = "30분" | "60분" | "90분" | "120분" | "150분" | "180분" | "210분" | "240분";
@@ -88,8 +87,6 @@ export default function VisitCareCalculatorPage() {
           </p>
         </div>
 
-       {/* <TopAd /> */}
-
         <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-5 shadow-sm sm:p-6">
           <div className="space-y-4">
             <div>
@@ -168,7 +165,7 @@ export default function VisitCareCalculatorPage() {
           </div>
         </div>
 
-       {/* <MiddleAd /> */}
+        <MiddleAd />
 
         <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-5 shadow-sm sm:p-6">
           <h2 className="text-base font-bold text-blue-900 sm:text-lg">예상 급여 결과</h2>
@@ -240,7 +237,7 @@ export default function VisitCareCalculatorPage() {
           </div>
         </section>
 
-      {/*  <BottomAd /> */}
+      <BottomAd />
 
         <section className="mt-5 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
           <h2 className="text-lg font-bold text-slate-900 sm:text-xl">자주 묻는 질문</h2>

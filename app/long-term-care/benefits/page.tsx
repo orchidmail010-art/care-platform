@@ -1,4 +1,7 @@
 import Link from "next/link";
+import TopAd from "../../components/ads/top-ad";
+import MiddleAd from "../../components/ads/middle-ad";
+import BottomAd from "../../components/ads/bottom-ad";
 import SiteHeader from "../../components/site-header";
 
 export default function LongTermCareBenefitsPage() {
@@ -38,6 +41,8 @@ export default function LongTermCareBenefitsPage() {
             재가급여부터 시설급여까지 맞춤형 서비스와 복지 혜택을 자세히 알아보세요.
           </p>
         </div>
+
+        <TopAd />
 
         <section className="mt-5 space-y-4">
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
@@ -132,6 +137,8 @@ export default function LongTermCareBenefitsPage() {
             </div>
           </article>
 
+          <MiddleAd />
+
           <section className="space-y-4">
             {faqs.map((faq) => (
               <details
@@ -148,6 +155,8 @@ export default function LongTermCareBenefitsPage() {
               </details>
             ))}
           </section>
+
+          <BottomAd />
 
           <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
             <h2 className="text-lg font-bold text-slate-900 sm:text-xl">관련 링크</h2>

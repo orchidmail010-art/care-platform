@@ -1,4 +1,7 @@
 import Link from "next/link";
+import TopAd from "../../components/ads/top-ad";
+import MiddleAd from "../../components/ads/middle-ad";
+import BottomAd from "../../components/ads/bottom-ad";
 import SiteHeader from "../../components/site-header";
 
 export default function LongTermCareCopaymentPage() {
@@ -38,6 +41,8 @@ export default function LongTermCareCopaymentPage() {
             등급별 계산 방식과 실제 사례를 통해 핵심 정보를 빠르게 확인해보세요.
           </p>
         </div>
+
+        <TopAd />
 
         <section className="mt-5 space-y-4">
           <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
@@ -101,6 +106,8 @@ export default function LongTermCareCopaymentPage() {
             </div>
           </article>
 
+          <MiddleAd />
+
           <section className="space-y-4">
             {faqs.map((faq) => (
               <details
@@ -117,6 +124,8 @@ export default function LongTermCareCopaymentPage() {
               </details>
             ))}
           </section>
+
+          <BottomAd />
 
           <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
             <h2 className="text-lg font-bold text-slate-900 sm:text-xl">관련 링크</h2>
